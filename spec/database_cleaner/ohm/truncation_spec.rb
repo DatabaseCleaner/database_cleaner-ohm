@@ -1,5 +1,6 @@
 require 'ohm'
 require 'database_cleaner/ohm/truncation'
+require 'yaml'
 
 module OhmTests
   class Widget < ::Ohm::Model
@@ -13,7 +14,7 @@ end
 
 RSpec.describe DatabaseCleaner::Ohm::Truncation do
   around do |example|
-    config = YAML::load(File.open("#{File.dirname(__FILE__)}/../../../examples/config/redis.yml"))
+    config = YAML::load(File.open("spec/support/redis.yml"))
     Ohm.connect url: config['test']['url']
     @redis = Ohm.redis
 

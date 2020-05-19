@@ -25,7 +25,14 @@ Gem::Specification.new do |spec|
   spec.add_dependency "database_cleaner-redis", "~> 1.8.0"
   spec.add_dependency "ohm"
 
+  if RUBY_VERSION < '1.9.3'
+    spec.add_development_dependency "rake", "< 11.0.0" # rake 11 requires Ruby 1.9.3 or later
+  elsif RUBY_VERSION < '2.0.0'
+    spec.add_development_dependency "rake", "< 12.0.0" # rake 12 requires Ruby 2.0.0 or later
+  else
+    spec.add_development_dependency "rake", "> 12.3.2"
+  end
+
   spec.add_development_dependency "bundler", "~> 1.16"
-  spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
 end

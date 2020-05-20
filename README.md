@@ -1,5 +1,8 @@
 # Database Cleaner Adapter for Ohm
 
+## Maintainers Wanted
+**This adapter is currently unmaintained. This means that bugs will not be fixed and features will not be added unless someone else does so. If you're interested in taking over maintenance, please [open an issue](https://github.com/DatabaseCleaner/database_cleaner/issues) and tell us about it!**
+
 [![Build Status](https://travis-ci.org/DatabaseCleaner/database_cleaner-ohm.svg?branch=master)](https://travis-ci.org/DatabaseCleaner/database_cleaner-ohm)
 [![Code Climate](https://codeclimate.com/github/DatabaseCleaner/database_cleaner-ohm/badges/gpa.svg)](https://codeclimate.com/github/DatabaseCleaner/database_cleaner-ohm)
 
